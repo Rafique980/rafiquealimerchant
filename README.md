@@ -1,4 +1,4 @@
-# Rafique Ali Merchant - Data Science Portfolio
+# Rafique Ali Merchant - Data Science Student Portfolio
 
 ## Overview
 This is my personal portfolio website showcasing my journey as a Data Science student, my projects, technical skills, certifications, and experience.
@@ -6,7 +6,7 @@ This is my personal portfolio website showcasing my journey as a Data Science st
 The portfolio highlights my work in Data Science, Machine Learning, Data Analytics, Data Visualization, and Automation.
 
 ## Live Website
-🔗 Your portfolio link
+🔗 https://rafiquealimerchant.vercel.app/
 
 ## Features
 - Responsive personal portfolio website
@@ -44,14 +44,4 @@ The portfolio highlights my work in Data Science, Machine Learning, Data Analyti
 - Machine Learning model development
 
 ## Tech Stack
-- HTML/CSS/JavaScript (or your actual framework)
-- React / Next.js (if used)
-- Tailwind CSS (if used)
 - Vercel (Deployment)
-
-## Installation & Setup
-
-Clone the repository:
-
-```bash
-git clone your-repository-link
