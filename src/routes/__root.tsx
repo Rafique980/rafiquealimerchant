@@ -81,10 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Portfolio of Rafiqueali Merchant, BSc Data Science student turning raw data into dashboards, forecasts, and business insights." },
       { name: "author", content: "Rafiqueali Merchant" },
       { property: "og:title", content: "Rafiqueali Merchant — Aspiring Data Analyst" },
-      { property: "og:description", content: "Data Science student building analytics dashboards, forecasts, and ML projects." },
+      { property: "og:description", content: "Portfolio of Rafiqueali Merchant, BSc Data Science student turning raw data into dashboards, forecasts, and business insights." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Rafiqueali Merchant — Aspiring Data Analyst" },
+      { name: "twitter:description", content: "Portfolio of Rafiqueali Merchant, BSc Data Science student turning raw data into dashboards, forecasts, and business insights." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4c9ab8cc-fcc6-4b45-8c8d-9ef9724264c6/id-preview-433a4545--4c8ea2ce-dcba-4bac-872d-77893fd59599.lovable.app-1784739487046.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4c9ab8cc-fcc6-4b45-8c8d-9ef9724264c6/id-preview-433a4545--4c8ea2ce-dcba-4bac-872d-77893fd59599.lovable.app-1784739487046.png" },
     ],
     links: [
       {
