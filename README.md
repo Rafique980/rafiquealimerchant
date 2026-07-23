@@ -1,29 +1,57 @@
-# Welcome to your Lovable project
+# Rafique Ali Merchant - Data Science Portfolio
 
-This project was built with [Lovable](https://lovable.dev).
+## Overview
+This is my personal portfolio website showcasing my journey as a Data Science student, my projects, technical skills, certifications, and experience.
 
-## Build with Lovable
+The portfolio highlights my work in Data Science, Machine Learning, Data Analytics, Data Visualization, and Automation.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Live Website
+🔗 Your portfolio link
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+## Features
+- Responsive personal portfolio website
+- About Me section
+- Skills and technologies showcase
+- Project showcase with live demos and GitHub links
+- Certifications & Experience section
+- Academic achievements and CGPA
+- Resume download functionality
+- Contact links (GitHub, LinkedIn, Email)
 
-## Development
+## Sections
+- Home
+- About
+- Skills
+- Projects
+- Certifications & Experience
+- Resume
+- Contact
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Projects Featured
+### 1. Sales Forecasting Dashboard
+- Time-series forecasting using ARIMA
+- Interactive Streamlit dashboard
+- Sales trend analysis and forecasting
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+### 2. E-commerce Analytics Dashboard
+- SQL-based data analysis
+- Power BI dashboard
+- Business insights generation
 
-## Built with
+### 3. Machine Learning Prediction Project
+- Data preprocessing
+- Exploratory Data Analysis
+- Machine Learning model development
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Tech Stack
+- HTML/CSS/JavaScript (or your actual framework)
+- React / Next.js (if used)
+- Tailwind CSS (if used)
+- Vercel (Deployment)
+
+## Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone your-repository-link
