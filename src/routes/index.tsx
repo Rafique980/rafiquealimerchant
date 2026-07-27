@@ -467,12 +467,6 @@ function Projects() {
                 <span className="font-mono text-xs text-muted-foreground">
                   ./project
                 </span>
-                {p.status && (
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-primary">
-                    <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
-                    {p.status}
-                  </span>
-                )}
               </div>
               <h3 className="text-lg font-semibold leading-tight">{p.title}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
@@ -488,28 +482,26 @@ function Projects() {
                   </span>
                 ))}
               </div>
-              {(p.demo || p.github) && (
-                <div className="mt-5 flex gap-2 border-t border-border pt-4">
-                  {p.demo && (
-                    <a
-                      href={p.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-                    >
-                      <ExternalLink className="h-3.5 w-3.5" /> Live Demo
-                    </a>
-                  )}
-                  {p.github && (
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-md border border-border px-3 py-2 text-xs font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
-                    >
-                      <Github className="h-3.5 w-3.5" /> GitHub
-                    </a>
-                  )}
+              {p.links.length > 0 && (
+                <div className="mt-5 flex flex-wrap gap-2 border-t border-border pt-4">
+                  {p.links.map((l) => {
+                    const Icon = l.icon;
+                    const primary =
+                      "inline-flex flex-1 items-center justify-center gap-1.5 rounded-md bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90";
+                    const outline =
+                      "inline-flex flex-1 items-center justify-center gap-1.5 rounded-md border border-border px-3 py-2 text-xs font-semibold text-foreground transition-colors hover:border-primary hover:text-primary";
+                    return (
+                      <a
+                        key={l.label}
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={l.variant === "primary" ? primary : outline}
+                      >
+                        <Icon className="h-3.5 w-3.5" /> {l.label}
+                      </a>
+                    );
+                  })}
                 </div>
               )}
             </article>
