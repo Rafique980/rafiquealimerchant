@@ -96,11 +96,12 @@ const PROJECTS = [
 
 const CERTIFICATIONS = [
   {
-    title: "Tata Group — Data Analytics Job Simulation",
+    title: "Tata — GenAI Powered Data Analytics Job Simulation",
     org: "Forage",
     date: "May 2026",
     detail:
       "EDA with AI-assisted tools, predictive modeling insights for delinquency risk, and an AI-driven collections strategy proposal.",
+    verify: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_69feefc482b3bdb1025bfe63_1778848721471_completion_certificate.pdf",
   },
   {
     title: "Deloitte Australia — Data Analytics Job Simulation",
@@ -108,12 +109,14 @@ const CERTIFICATIONS = [
     date: "May 2026",
     detail:
       "Forensic technology data analysis, interactive Tableau dashboard, and Excel-based classification with business insights.",
+    verify: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_69feefc482b3bdb1025bfe63_1779088934449_completion_certificate.pdf",
   },
   {
     title: "Google Cloud Computing Foundations",
     org: "Google",
     date: "Certificate",
     detail: "Fundamentals of cloud infrastructure, storage, and compute services on GCP.",
+    verify: "https://www.credly.com/badges/f3c72d2d-3995-4bc1-a693-bd0b7dabad20/linked_in_profile",
   },
   {
     title: "MS-CIT",
@@ -544,7 +547,21 @@ function Certifications() {
                       <span className="text-xs font-semibold text-primary">{c.org}</span>
                       <span className="font-mono text-[10px] text-muted-foreground">{c.date}</span>
                     </div>
-                    <h3 className="mt-2 font-semibold leading-snug">{c.title}</h3>
+                    {c.verify ? (
+                      <h3 className="mt-2 font-semibold leading-snug">
+                        <a
+                          href={c.verify}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group inline-flex items-start gap-1 text-foreground decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:underline"
+                        >
+                          {c.title}
+                          <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                        </a>
+                      </h3>
+                    ) : (
+                      <h3 className="mt-2 font-semibold leading-snug">{c.title}</h3>
+                    )}
                     <p className="mt-2 text-sm text-muted-foreground">{c.detail}</p>
                   </div>
                 </div>
