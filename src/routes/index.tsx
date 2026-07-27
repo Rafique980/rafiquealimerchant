@@ -179,7 +179,7 @@ function Nav() {
         <a href="#top" className="flex items-center gap-2 font-display font-bold">
           <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full ring-2 ring-primary/60">
             <img
-              src={profilePhoto.url}
+              src="https://raw.githubusercontent.com/Rafique980/rafiquealimerchant/refs/heads/main/IMG_20260727_174441.jpg"
               alt="Rafiqueali Merchant"
               className="h-9 w-9 rounded-full object-cover object-center"
             />
