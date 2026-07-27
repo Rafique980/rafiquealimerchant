@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import profilePhoto from "@/assets/rafiqueali-profile.jpg.asset.json";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
@@ -173,9 +174,11 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2 font-display font-bold">
-          <span className="grid h-8 w-8 place-items-center rounded-md bg-primary text-primary-foreground">
-            R
-          </span>
+          <img
+            src={profilePhoto.url}
+            alt="Rafiqueali Merchant"
+            className="h-8 w-8 rounded-full object-cover ring-2 ring-primary/60"
+          />
           <span className="hidden sm:inline">Rafiqueali</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
