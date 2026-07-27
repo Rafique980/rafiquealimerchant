@@ -66,22 +66,30 @@ const PROJECTS = [
     description:
       "Interactive Streamlit dashboard for revenue trends, KPIs, and product analysis. Implements ARIMA time-series forecasting for sales prediction and auto-generates business insights.",
     tags: ["Python", "Streamlit", "Plotly", "ARIMA"],
-    demo: "https://sales-forecast-dashboard-kxzh3m7itdudwlsbatmjkh.streamlit.app/",
-    github: "https://github.com/Rafique980/Ai-powered-Sales-dashboard",
+    links: [
+      { label: "Live Demo", href: "https://sales-forecast-dashboard-kxzh3m7itdudwlsbatmjkh.streamlit.app/", icon: ExternalLink, variant: "primary" as const },
+      { label: "GitHub", href: "https://github.com/Rafique980/Ai-powered-Sales-dashboard", icon: Github, variant: "outline" as const },
+    ],
   },
   {
     title: "Ecommerce Customer Analytics Dashboard",
     description:
       "End-to-end analytics on a 100k+ record relational ecommerce dataset. Cleaning in Python/SQL, modeling relationships across orders, customers, payments, products, reviews and sellers, then Power BI dashboards for revenue, customer, payment and review analytics.",
     tags: ["MySQL", "Power BI", "Python"],
-    status: "In Progress",
+    links: [
+      { label: "Download .pbix", href: "https://drive.google.com/file/d/1dosRdQbCd7ZAY9rlqAgHz04vuW9_wdGX/view?usp=drivesdk", icon: Download, variant: "primary" as const },
+      { label: "GitHub", href: "https://github.com/Rafique980/ecommerce-sales-analytics-dashboard", icon: Github, variant: "outline" as const },
+    ],
   },
   {
     title: "Customer Churn Prediction & Analysis",
     description:
       "Classification models to predict churn risk, analysis of churn-driving behavioral factors, and business-focused retention recommendations with visualizations.",
-    tags: ["Python", "Machine Learning"],
-    status: "In Progress",
+    tags: ["Python", "Machine Learning", "Tableau"],
+    links: [
+      { label: "Live Dashboard", href: "https://public.tableau.com/app/profile/rafique.merchant/viz/CustomerChurnAnalysisDashboard_17851419341160/Dashboard1", icon: ExternalLink, variant: "primary" as const },
+      { label: "GitHub", href: "https://github.com/Rafique980/Customer-Churn-Prediction", icon: Github, variant: "outline" as const },
+    ],
   },
 ];
 
