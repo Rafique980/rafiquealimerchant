@@ -96,11 +96,12 @@ const PROJECTS = [
 
 const CERTIFICATIONS = [
   {
-    title: "Tata Group — Data Analytics Job Simulation",
+    title: "Tata — GenAI Powered Data Analytics Job Simulation",
     org: "Forage",
     date: "May 2026",
     detail:
       "EDA with AI-assisted tools, predictive modeling insights for delinquency risk, and an AI-driven collections strategy proposal.",
+    verify: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_69feefc482b3bdb1025bfe63_1778848721471_completion_certificate.pdf",
   },
   {
     title: "Deloitte Australia — Data Analytics Job Simulation",
@@ -108,12 +109,14 @@ const CERTIFICATIONS = [
     date: "May 2026",
     detail:
       "Forensic technology data analysis, interactive Tableau dashboard, and Excel-based classification with business insights.",
+    verify: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_69feefc482b3bdb1025bfe63_1779088934449_completion_certificate.pdf",
   },
   {
     title: "Google Cloud Computing Foundations",
     org: "Google",
     date: "Certificate",
     detail: "Fundamentals of cloud infrastructure, storage, and compute services on GCP.",
+    verify: "https://www.credly.com/badges/f3c72d2d-3995-4bc1-a693-bd0b7dabad20/linked_in_profile",
   },
   {
     title: "MS-CIT",
