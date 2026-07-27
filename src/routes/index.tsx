@@ -177,11 +177,13 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2 font-display font-bold">
-          <img
-            src={profilePhoto.url}
-            alt="Rafiqueali Merchant"
-            className="h-8 w-8 rounded-full object-cover ring-2 ring-primary/60"
-          />
+          <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full ring-2 ring-primary/60">
+            <img
+              src={profilePhoto.url}
+              alt="Rafiqueali Merchant"
+              className="h-9 w-9 rounded-full object-cover object-center"
+            />
+          </span>
           <span className="hidden sm:inline">Rafiqueali</span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
