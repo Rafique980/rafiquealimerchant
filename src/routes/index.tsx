@@ -547,7 +547,21 @@ function Certifications() {
                       <span className="text-xs font-semibold text-primary">{c.org}</span>
                       <span className="font-mono text-[10px] text-muted-foreground">{c.date}</span>
                     </div>
-                    <h3 className="mt-2 font-semibold leading-snug">{c.title}</h3>
+                    {c.verify ? (
+                      <h3 className="mt-2 font-semibold leading-snug">
+                        <a
+                          href={c.verify}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group inline-flex items-start gap-1 text-foreground decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:underline"
+                        >
+                          {c.title}
+                          <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                        </a>
+                      </h3>
+                    ) : (
+                      <h3 className="mt-2 font-semibold leading-snug">{c.title}</h3>
+                    )}
                     <p className="mt-2 text-sm text-muted-foreground">{c.detail}</p>
                   </div>
                 </div>
