@@ -454,7 +454,7 @@ function Projects() {
         <SectionHeader
           eyebrow="03 / Projects"
           title="Things I've built"
-          sub="A mix of shipped work and in-progress builds — click through for code and demos."
+          sub="Shipped analytics projects — click through for code, dashboards, and demos."
         />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((p) => (
