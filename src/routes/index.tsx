@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import profilePhoto from "@/assets/rafiqueali-profile.jpg.asset.json";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
