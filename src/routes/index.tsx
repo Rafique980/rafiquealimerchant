@@ -113,7 +113,7 @@ const CERTIFICATIONS = [
   {
     title: "Google Cloud Computing Foundations",
     org: "Google",
-    date: "Certificate",
+    date: "Issued May 2026",
     detail: "Fundamentals of cloud infrastructure, storage, and compute services on GCP.",
     verify: "https://www.credly.com/badges/f3c72d2d-3995-4bc1-a693-bd0b7dabad20/linked_in_profile",
   },
