@@ -64,8 +64,8 @@ const PROJECTS = [
   {
     title: "Sales Analytics & Forecasting Web App",
     description:
-      "Interactive Streamlit dashboard for revenue trends, KPIs, and product analysis. Implements ARIMA time-series forecasting for sales prediction and auto-generates business insights.",
-    tags: ["Python", "Streamlit", "Plotly", "ARIMA"],
+      "Built an interactive Streamlit web app using ARIMA time-series modeling and AI-generated insights (Groq) to forecast sales and surface business recommendations. Developed dashboards for monthly revenue trends, KPI tracking, and product-level performance.",
+    tags: ["Python", "Streamlit", "Plotly", "ARIMA", "Groq AI"],
     links: [
       { label: "Live Demo", href: "https://sales-forecast-dashboard-kxzh3m7itdudwlsbatmjkh.streamlit.app/", icon: ExternalLink, variant: "primary" as const },
       { label: "GitHub", href: "https://github.com/Rafique980/Ai-powered-Sales-dashboard", icon: Github, variant: "outline" as const },
@@ -74,8 +74,8 @@ const PROJECTS = [
   {
     title: "Ecommerce Customer Analytics Dashboard",
     description:
-      "End-to-end analytics on a 100k+ record relational ecommerce dataset. Cleaning in Python/SQL, modeling relationships across orders, customers, payments, products, reviews and sellers, then Power BI dashboards for revenue, customer, payment and review analytics.",
-    tags: ["MySQL", "Power BI", "Python"],
+      "Built an end-to-end Power BI dashboard with DAX measures, analyzing 99K orders and ₹13.59M in revenue across a relational ecommerce dataset (orders, customers, payments, products, reviews, sellers). Achieved a 97% delivery success rate and identified that a small group of product categories drove the majority of sales.",
+    tags: ["MySQL", "Power BI", "Python", "DAX"],
     links: [
       { label: "Download .pbix", href: "https://drive.google.com/file/d/1dosRdQbCd7ZAY9rlqAgHz04vuW9_wdGX/view?usp=drivesdk", icon: Download, variant: "primary" as const },
       { label: "GitHub", href: "https://github.com/Rafique980/ecommerce-sales-analytics-dashboard", icon: Github, variant: "outline" as const },
@@ -84,7 +84,7 @@ const PROJECTS = [
   {
     title: "Customer Churn Prediction & Analysis",
     description:
-      "Classification models to predict churn risk, analysis of churn-driving behavioral factors, and business-focused retention recommendations with visualizations.",
+      "Built classification models to predict customer churn, uncovering a 26.5% overall churn rate. Identified month-to-month contract customers as highest-risk (42.7% of churners, 70%+ in top-risk segment) and visualized findings in an interactive Tableau dashboard to support targeted retention strategy.",
     tags: ["Python", "Machine Learning", "Tableau"],
     links: [
       { label: "Live Dashboard", href: "https://public.tableau.com/app/profile/rafique.merchant/viz/CustomerChurnAnalysisDashboard_17851419341160/Dashboard1", icon: ExternalLink, variant: "primary" as const },
