@@ -120,8 +120,10 @@ const CERTIFICATIONS = [
   {
     title: "MS-CIT",
     org: "MKCL",
-    date: "Score: 81/100",
+    date: "Issued July 2024",
     detail: "Microsoft Office suite and computer fundamentals certification.",
+    verify:
+      "https://raw.githubusercontent.com/Rafique980/rafiquealimerchant/refs/heads/main/New%20Doc%2007-27-2026%2018.42.jpg",
   },
 ];
 
