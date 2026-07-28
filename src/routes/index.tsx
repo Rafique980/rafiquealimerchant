@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
@@ -272,8 +273,8 @@ function Hero() {
                 View Projects <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="/Rafiqueali-Merchant-Resume.docx"
-                download
+                href={resumeAsset.url}
+                download="RAFIQUE_ALI_MERCHANT_Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
               >
                 <Download className="h-4 w-4" /> Download Resume
