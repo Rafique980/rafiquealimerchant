@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import resumeAsset from "@/assets/resume.pdf.asset.json";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
   ArrowRight,
@@ -22,8 +21,28 @@ import {
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Rafiqueali Merchant — Data Analyst Portfolio" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Rafiqueali Merchant, a BSc Data Science student building dashboards, forecasts, and business insights.",
+      },
+      { property: "og:title", content: "Rafiqueali Merchant — Data Analyst Portfolio" },
+      {
+        property: "og:description",
+        content:
+          "Explore Rafiqueali Merchant's data analytics projects, skills, certifications, and resume.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Portfolio,
 });
+
+const RESUME_URL = "/Rafiqueali-Merchant-Resume.pdf";
 
 const NAV = [
   { href: "#about", label: "About" },
@@ -273,8 +292,9 @@ function Hero() {
                 View Projects <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href={resumeAsset.url}
+                href={RESUME_URL}
                 download="Rafiqueali-Merchant-Resume.pdf"
+                type="application/pdf"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
               >
                 <Download className="h-4 w-4" /> Download Resume
