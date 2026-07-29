@@ -274,8 +274,7 @@ function Hero() {
               </a>
               <a
                 href={resumeAsset.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Rafiqueali-Merchant-Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-md border border-border bg-surface px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
               >
                 <Download className="h-4 w-4" /> Download Resume
