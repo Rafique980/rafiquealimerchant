@@ -598,7 +598,7 @@ function Certifications() {
   );
 }
 
-const WEB3FORMS_ACCESS_KEY = import.meta.env['VITE_WEB3FORMS_ACCESS_KEY'] as string | undefined;
+const WEB3FORMS_ACCESS_KEY = "04b9c786-2d0e-460c-afb0-82c49a775126";
 
 function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
