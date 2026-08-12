@@ -709,11 +709,22 @@ function Contact() {
             </div>
             <button
               type="submit"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              disabled={status === "sending"}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
             >
               <Send className="h-4 w-4" />
-              {sent ? "Opening your mail app…" : "Send message"}
+              {status === "sending" ? "Sending…" : "Send message"}
             </button>
+            {feedback && (
+              <p
+                role="status"
+                aria-live="polite"
+                className={`text-sm ${status === "success" ? "text-primary" : "text-destructive"}`}
+              >
+                {feedback}
+              </p>
+            )}
+
           </form>
         </div>
       </div>
