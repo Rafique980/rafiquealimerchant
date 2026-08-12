@@ -598,32 +598,55 @@ function Certifications() {
   );
 }
 
+const WEB3FORMS_ACCESS_KEY = import.meta.env['VITE_WEB3FORMS_ACCESS_KEY'] as string | undefined;
+
 function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [feedback, setFeedback] = useState("");
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
-    const name = String(fd.get("name") || "");
-    const email = String(fd.get("email") || "");
-    const message = String(fd.get("message") || "");
-    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    const href = `mailto:rafiquealimerchant@gmail.com?subject=${subject}&body=${body}`;
 
-    // Anchor click hands off to the mail app instantly without navigating the page
-    const a = document.createElement("a");
-    a.href = href;
-    a.rel = "noopener";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
+    if (!WEB3FORMS_ACCESS_KEY) {
+      setStatus("error");
+      setFeedback("Email service isn't configured yet. Please email rafiquealimerchant@gmail.com directly.");
+      return;
+    }
 
-    setSent(true);
-    formRef.current?.reset();
-    window.setTimeout(() => setSent(false), 2500);
+    setStatus("sending");
+    setFeedback("");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Portfolio contact from ${String(fd.get("name") || "")}`,
+          from_name: "Portfolio Website",
+          name: String(fd.get("name") || ""),
+          email: String(fd.get("email") || ""),
+          message: String(fd.get("message") || ""),
+        }),
+      });
+      const data = (await res.json()) as { success?: boolean; message?: string };
+      if (res.ok && data.success) {
+        setStatus("success");
+        setFeedback("Thanks! Your message has been sent — I'll reply soon.");
+        formRef.current?.reset();
+      } else {
+        setStatus("error");
+        setFeedback(data.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setFeedback("Network error. Please check your connection and try again.");
+    }
   };
+
+
 
 
   return (
@@ -686,11 +709,22 @@ function Contact() {
             </div>
             <button
               type="submit"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              disabled={status === "sending"}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
             >
               <Send className="h-4 w-4" />
-              {sent ? "Opening your mail app…" : "Send message"}
+              {status === "sending" ? "Sending…" : "Send message"}
             </button>
+            {feedback && (
+              <p
+                role="status"
+                aria-live="polite"
+                className={`text-sm ${status === "success" ? "text-primary" : "text-destructive"}`}
+              >
+                {feedback}
+              </p>
+            )}
+
           </form>
         </div>
       </div>
