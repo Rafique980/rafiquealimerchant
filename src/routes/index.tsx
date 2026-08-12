@@ -610,10 +610,21 @@ function Contact() {
     const message = String(fd.get("message") || "");
     const subject = encodeURIComponent(`Portfolio contact from ${name}`);
     const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:rafiquealimerchant@gmail.com?subject=${subject}&body=${body}`;
+    const href = `mailto:rafiquealimerchant@gmail.com?subject=${subject}&body=${body}`;
+
+    // Anchor click hands off to the mail app instantly without navigating the page
+    const a = document.createElement("a");
+    a.href = href;
+    a.rel = "noopener";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
     setSent(true);
     formRef.current?.reset();
+    window.setTimeout(() => setSent(false), 2500);
   };
+
 
   return (
     <section id="contact" className="relative border-t border-border py-24">
