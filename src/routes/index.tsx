@@ -505,6 +505,15 @@ function Projects() {
                 <span className="font-mono text-xs text-muted-foreground">
                   ./project
                 </span>
+                {p.status && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/40 bg-amber-500/10 px-2.5 py-1 text-[10px] font-semibold text-amber-400">
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-400" />
+                    </span>
+                    {p.status}
+                  </span>
+                )}
               </div>
               <h3 className="text-lg font-semibold leading-tight">{p.title}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
