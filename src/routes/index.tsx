@@ -61,7 +61,7 @@ const SKILLS = [
   {
     title: "Data Viz & BI",
     icon: BarChart3,
-    items: ["Power BI", "Plotly", "Streamlit"],
+    items: ["Power BI", "Tableau", "Plotly", "Streamlit"],
   },
   {
     title: "Database & Analytics",
@@ -71,12 +71,12 @@ const SKILLS = [
   {
     title: "Tools",
     icon: Wrench,
-    items: ["Excel", "GitHub"],
+    items: ["Excel", "GitHub", "Google Colab", "VS Code", "Vercel", "UiPath"],
   },
   {
     title: "Concepts",
     icon: Brain,
-    items: ["Exploratory Data Analysis", "Time Series Forecasting (ARIMA)", "Machine Learning Basics"],
+    items: ["Exploratory Data Analysis", "Time Series Forecasting (ARIMA)", "Machine Learning Basics", "Anomaly Detection", "Decision Support", "Predictive Analytics"],
   },
 ];
 
@@ -84,8 +84,8 @@ const PROJECTS = [
   {
     title: "Sales Analytics & Forecasting Web App",
     description:
-      "Built an interactive Streamlit web app using ARIMA time-series modeling and AI-generated insights (Groq) to forecast sales and surface business recommendations. Developed dashboards for monthly revenue trends, KPI tracking, and product-level performance.",
-    tags: ["Python", "Streamlit", "Plotly", "ARIMA", "Groq AI"],
+      "Built an interactive Streamlit web app using ARIMA time-series modeling and AI-generated insights (Groq) to forecast sales. The app now automatically flags months that deviate significantly from the forecast, pairing each flagged month with a reason and recommended next step — turning a static forecast chart into an actionable monitoring tool.",
+    tags: ["Python", "Streamlit", "Plotly", "ARIMA", "Groq AI", "Anomaly Detection"],
     links: [
       { label: "Live Demo", href: "https://sales-forecast-dashboard-kxzh3m7itdudwlsbatmjkh.streamlit.app/", icon: ExternalLink, variant: "primary" as const },
       { label: "GitHub", href: "https://github.com/Rafique980/Ai-powered-Sales-dashboard", icon: Github, variant: "outline" as const },
@@ -94,8 +94,8 @@ const PROJECTS = [
   {
     title: "Ecommerce Customer Analytics Dashboard",
     description:
-      "Built an end-to-end Power BI dashboard with DAX measures, analyzing 99K orders and ₹13.59M in revenue across a relational ecommerce dataset (orders, customers, payments, products, reviews, sellers). Achieved a 97% delivery success rate and identified that a small group of product categories drove the majority of sales.",
-    tags: ["MySQL", "Power BI", "Python", "DAX"],
+      "Built an end-to-end Power BI dashboard with DAX measures, analyzing 99K orders and ₹13.59M in revenue across a relational ecommerce dataset. Achieved a 97% delivery success rate. Extended the dashboard with seller and product-category-level performance flags — each with a specific reason and recommended action (e.g., high revenue + low reviews → priority quality audit; underperforming categories → bundling recommendations).",
+    tags: ["MySQL", "Power BI", "Python", "DAX", "Decision Support"],
     links: [
       { label: "Download .pbix", href: "https://drive.google.com/file/d/1dosRdQbCd7ZAY9rlqAgHz04vuW9_wdGX/view?usp=drivesdk", icon: Download, variant: "primary" as const },
       { label: "GitHub", href: "https://github.com/Rafique980/ecommerce-sales-analytics-dashboard", icon: Github, variant: "outline" as const },
@@ -104,12 +104,20 @@ const PROJECTS = [
   {
     title: "Customer Churn Prediction & Analysis",
     description:
-      "Built classification models to predict customer churn, uncovering a 26.5% overall churn rate. Identified month-to-month contract customers as highest-risk (42.7% of churners, 70%+ in top-risk segment) and visualized findings in an interactive Tableau dashboard to support targeted retention strategy.",
-    tags: ["Python", "Machine Learning", "Tableau"],
+      "Built classification models to predict customer churn, uncovering a 26.5% overall churn rate. Compared Logistic Regression and Random Forest, selecting Logistic Regression for its stronger recall and interpretability. Every customer — not just high-risk ones — now receives a specific reason and recommended retention action, including proactive loyalty offers for stable, long-tenure customers. Visualized in an interactive Tableau dashboard.",
+    tags: ["Python", "Machine Learning", "Tableau", "Decision Support"],
     links: [
       { label: "Live Dashboard", href: "https://public.tableau.com/app/profile/rafique.merchant/viz/CustomerChurnAnalysisDashboard_17851419341160/Dashboard1", icon: ExternalLink, variant: "primary" as const },
       { label: "GitHub", href: "https://github.com/Rafique980/Customer-Churn-Prediction", icon: Github, variant: "outline" as const },
     ],
+  },
+  {
+    title: "RPA-Powered Data Preparation Bot",
+    description:
+      "Building a human-in-the-loop RPA workflow using UiPath to automate repetitive data preparation — collecting daily sales files, standardizing formats, removing duplicates, and generating a data quality report. Rather than automating analysis itself, the bot handles mechanical prep work so the analyst can focus on judgment, interpretation, and decision-making. Analysis and business recommendations remain Python/SQL and Power BI driven.",
+    tags: ["UiPath", "Python", "Data Quality", "Decision Support"],
+    status: "In Progress",
+    links: [],
   },
 ];
 
@@ -497,6 +505,15 @@ function Projects() {
                 <span className="font-mono text-xs text-muted-foreground">
                   ./project
                 </span>
+                {p.status && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/40 bg-amber-500/10 px-2.5 py-1 text-[10px] font-semibold text-amber-400">
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+                      <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-400" />
+                    </span>
+                    {p.status}
+                  </span>
+                )}
               </div>
               <h3 className="text-lg font-semibold leading-tight">{p.title}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
