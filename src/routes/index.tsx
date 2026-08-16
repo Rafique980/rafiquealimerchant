@@ -71,7 +71,7 @@ const SKILLS = [
   {
     title: "Tools",
     icon: Wrench,
-    items: ["Excel", "GitHub", "Google Colab", "VS Code", "Vercel", "UiPath"],
+    items: ["Excel", "GitHub", "Google Colab", "Vercel", "UiPath"],
   },
   {
     title: "Concepts",
